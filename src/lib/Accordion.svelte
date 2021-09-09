@@ -1,5 +1,5 @@
 <script>
-	import { slide } from './Slide';
+	import { slide } from './actions/Slide';
 	export let buttonText = '';
 	export let isOpen = true;
 </script>
