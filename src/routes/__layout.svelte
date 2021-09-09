@@ -2,4 +2,12 @@
 	import '$lib/style.css';
 </script>
 
-<slot />
+<div class="wrapper">
+	<slot />
+</div>
+
+<style>
+	.wrapper {
+		margin: 1rem;
+	}
+</style>

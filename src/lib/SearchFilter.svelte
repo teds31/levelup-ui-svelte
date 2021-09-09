@@ -45,15 +45,16 @@
 	.wrapper {
 		position: relative;
 		display: inline-block;
+		padding-bottom: 2rem;
 	}
 	ul {
+		background-color: lightgray;
 		position: absolute;
 		width: 100%;
 		border: 1px solid black;
 		list-style: none;
 		padding: 0;
 		margin: 0;
-		z-index: 5;
 	}
 	li {
 		text-transform: capitalize;
