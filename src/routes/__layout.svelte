@@ -3,7 +3,7 @@
 	import '../styles/tailwind-output.css';
 </script>
 
-<div class="body-wrapper">
+<div class="body-wrapper text-brand-alert">
 	<slot />
 </div>
 
