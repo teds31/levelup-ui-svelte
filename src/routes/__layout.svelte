@@ -9,5 +9,7 @@
 <style>
 	.body-wrapper {
 		margin: 1rem;
+		padding-bottom: 2rem;
+		height: 100vh;
 	}
 </style>

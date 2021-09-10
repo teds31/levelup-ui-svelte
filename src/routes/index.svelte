@@ -3,10 +3,11 @@
 	import Field from '$lib/Field.svelte';
 	import Markdown from '$lib/Markdown.svelte';
 	import Modal from '$lib/Modal.svelte';
-	import Portal from '$lib/Portal.svelte';
 	import SearchFilter from '$lib/SearchFilter.svelte';
 	import Space from '$lib/Space.svelte';
 	import Toggle from '$lib/Toggle.svelte';
+	import Toast from '$lib/toast-store/Toast.svelte';
+	import { toast } from '$lib/toast-store/toast';
 
 	// variables
 	let isToggled;
@@ -44,6 +45,8 @@
 <h3>{range}</h3>
 <Space />
 <h2>Markdown Component</h2>
+<p>Type anything</p>
+
 <Markdown />
 <Space />
 <h2>Modal</h2>
@@ -51,4 +54,8 @@
 	<Field bind:value={text} label="Text Input" instructions="Type here" placeholder="Text" />
 </Modal>
 <button on:click={() => (isModalOpen = true)}>Open Modal</button>
+<Space />
+<h2>Toast Messages</h2>
+<Toast />
+<button on:click={() => toast.send('TOAST MESSAGE' + ' ' + Math.random())}>Open Toast</button>
 <Space />
