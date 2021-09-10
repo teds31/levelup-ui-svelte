@@ -3,6 +3,7 @@
 	import Portal from './Portal.svelte';
 
 	export let isModalOpen = false;
+	export let background = true;
 
 	function closeModal() {
 		isModalOpen = false;
@@ -15,12 +16,15 @@
 			<button on:click={closeModal} aria-label="Close Modal">Close</button>
 			<slot />
 		</div>
-		<div class="background" on:click={closeModal} transition:fade />
+		{#if background}
+			<div class="background" on:click={closeModal} transition:fade />
+		{/if}
 	</Portal>
 {/if}
 
 <style>
 	.modal-wrapper {
+		height: 200px;
 		background: white;
 		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 		position: fixed;
