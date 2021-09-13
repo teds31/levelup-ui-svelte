@@ -8,6 +8,8 @@
 	import Toggle from '$lib/Toggle.svelte';
 	import Toast from '$lib/toast-store/Toast.svelte';
 	import { toast } from '$lib/toast-store/toast';
+	import PrimaryBtn from '$lib/PrimaryBtn.svelte';
+	import DarkBtn from '$lib/DarkBtn.svelte';
 
 	// variables
 	let isToggled;
@@ -66,3 +68,19 @@
 <Toast />
 <button on:click={() => toast.send('TOAST MESSAGE' + ' ' + Math.random())}>Open Toast</button>
 <Space />
+<!-- Buttons  -->
+<h2>Buttons</h2>
+<br />
+<div class="flex gap-8">
+	<div class="flex-col">
+		Primary Button
+		<br />
+		<PrimaryBtn text="Submit" />
+	</div>
+	<div>
+		Black Button
+		<br />
+		<DarkBtn />
+	</div>
+</div>
+<br /><br />

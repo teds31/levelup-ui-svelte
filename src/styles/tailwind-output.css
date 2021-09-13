@@ -604,11 +604,11 @@ video {
 		--color--warning: 244, 130, 31;
 		--color--alert: 206, 53, 39;
 	}
-.m-4 {
-	margin: 1rem;
-}
 .m-0 {
 	margin: 0px;
+}
+.m-4 {
+	margin: 1rem;
 }
 .mr-1 {
 	margin-right: 0.25rem;
@@ -618,6 +618,9 @@ video {
 }
 .inline-block {
 	display: inline-block;
+}
+.flex {
+	display: flex;
 }
 .hidden {
 	display: none;
@@ -635,33 +638,57 @@ video {
 .transform {
 	transform: var(--tw-transform);
 }
+.flex-col {
+	flex-direction: column;
+}
+.gap-4 {
+	gap: 1rem;
+}
+.gap-8 {
+	gap: 2rem;
+}
 .border {
 	border-width: 1px;
 }
-<<<<<<< HEAD
-.text-brand-alert {
-	--tw-text-opacity: 1;
-	color: rgba(var(--color--alert), var(--tw-text-opacity));
-=======
 .border-t-0 {
 	border-top-width: 0px;
 }
 .border-solid {
 	border-style: solid;
 }
-.border-brand-primary {
-	--tw-border-opacity: 1;
-	border-color: rgba(var(--color--brand-primary), var(--tw-border-opacity));
-}
 .border-brand-darkGray {
 	--tw-border-opacity: 1;
 	border-color: rgba(var(--color--dark-gray), var(--tw-border-opacity));
+}
+.bg-brand-primary {
+	--tw-bg-opacity: 1;
+	background-color: rgba(var(--color--brand-primary), var(--tw-bg-opacity));
+}
+.bg-brand-dark {
+	--tw-bg-opacity: 1;
+	background-color: rgba(var(--color--brand-dark), var(--tw-bg-opacity));
+}
+.bg-brand-softBlack {
+	--tw-bg-opacity: 1;
+	background-color: rgba(var(--color--soft-black), var(--tw-bg-opacity));
 }
 .p-1\.5 {
 	padding: 0.375rem;
 }
 .p-1 {
 	padding: 0.25rem;
+}
+.px-2 {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+.px-4 {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.py-2 {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 }
 .pb-8 {
 	padding-bottom: 2rem;
@@ -673,22 +700,28 @@ video {
 	font-size: 0.875rem;
 	line-height: 1.25rem;
 }
+.font-bold {
+	font-weight: 700;
+}
+.text-white {
+	--tw-text-opacity: 1;
+	color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
 .opacity-70 {
 	opacity: 0.7;
->>>>>>> 03b2b8095b6c6fa6964eb7da8cc92cc51230697d
 }
 .filter {
 	filter: var(--tw-filter);
+}
+.transition-transform {
+	transition-property: transform;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
 }
 .transition {
 	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
 	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
 	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 150ms;
-}
-.transition-transform {
-	transition-property: transform;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
 }
