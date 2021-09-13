@@ -613,18 +613,6 @@ video {
 .border {
 	border-width: 1px;
 }
-.text-brand-success {
-	--tw-text-opacity: 1;
-	color: rgba(var(--color--success), var(--tw-text-opacity));
-}
-.text-brand-caution {
-	--tw-text-opacity: 1;
-	color: rgba(var(--color--caution), var(--tw-text-opacity));
-}
-.text-brand-warning {
-	--tw-text-opacity: 1;
-	color: rgba(var(--color--warning), var(--tw-text-opacity));
-}
 .text-brand-alert {
 	--tw-text-opacity: 1;
 	color: rgba(var(--color--alert), var(--tw-text-opacity));

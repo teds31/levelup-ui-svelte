@@ -21,4 +21,7 @@
 		gap: 3rem;
 		margin: 1rem;
 	}
+	textarea {
+		border: 1px solid black;
+	}
 </style>

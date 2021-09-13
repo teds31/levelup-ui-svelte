@@ -1,24 +1,28 @@
 {
   "name": "ui-components-in-svelte",
-  "version": "0.0.1","scripts": {
-  
+  "version": "0.0.1",
+  "scripts": {
     "dev:only": "svelte-kit dev",
-    
     "build:only": "svelte-kit build",
-    
     "preview": "svelte-kit preview",
-    
     "tailwind:watch": "cross-env TAILWIND_MODE=watch cross-env NODE_ENV=development postcss src/styles/tailwind.css -o src/styles/tailwind-output.css -w",
-    
     "tailwind:build": "cross-env TAILWIND_MODE=build cross-env NODE_ENV=production postcss src/styles/tailwind.css -o src/styles/tailwind-output.css",
-    
     "dev": "concurrently \"npm run dev:only\" \"npm run tailwind:watch\"",
-    "build": "npm run tailwind:build && npm run build:only"
+    "build": "npm run tailwind:build && npm run build:only",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@storybook/addon-actions": "^6.3.8",
+    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-links": "^6.3.8",
+    "@storybook/addon-svelte-csf": "^1.1.0",
+    "@storybook/svelte": "^6.3.8",
     "@sveltejs/adapter-vercel": "next",
     "@sveltejs/kit": "next",
     "autoprefixer": "^10.3.4",
+    "babel-loader": "^8.2.2",
     "concurrently": "^6.2.1",
     "cross-env": "^7.0.3",
     "eslint": "^7.22.0",
@@ -28,7 +32,8 @@
     "postcss-cli": "^8.3.1",
     "prettier": "~2.2.1",
     "prettier-plugin-svelte": "^2.2.0",
-    "svelte": "^3.34.0",
+    "svelte": "^3.42.5",
+    "svelte-loader": "^3.1.2",
     "tailwindcss": "^2.2.15"
   },
   "type": "module",

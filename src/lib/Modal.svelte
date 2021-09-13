@@ -8,12 +8,19 @@
 	function closeModal() {
 		isModalOpen = false;
 	}
+
+	import { clickOutside } from './actions/clickOutside';
 </script>
 
 {#if isModalOpen}
 	<Portal>
-		<div class="modal-wrapper" transition:fly={{ opacity: 0, y: 100 }}>
-			<button on:click={closeModal} aria-label="Close Modal">Close</button>
+		<div
+			use:clickOutside
+			on:click-outside={closeModal}
+			class="modal-wrapper"
+			transition:fly={{ opacity: 0, y: 100 }}
+		>
+			<button class="close-btn" on:click={closeModal} aria-label="Close Modal">Close</button>
 			<slot />
 		</div>
 		{#if background}
@@ -42,5 +49,10 @@
 		inset: 0;
 		position: fixed;
 		z-index: 100;
+	}
+	.close-btn {
+		position: absolute;
+		top: -10px;
+		right: -10px;
 	}
 </style>

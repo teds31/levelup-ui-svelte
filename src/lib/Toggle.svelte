@@ -1,11 +1,12 @@
 <script>
 	export let isToggled = false;
+	export let label = '';
 </script>
 
 <label>
+	{label}
 	<input type="checkbox" checked={isToggled} />
 	<div class="toggle" />
-	Label
 </label>
 
 <style>
@@ -30,8 +31,8 @@
 	.toggle::after {
 		content: '';
 		position: absolute;
-		top: -1px;
-		left: -1px;
+		top: -0.25px;
+		left: -0.5px;
 		height: var(--height);
 		width: 50%;
 		border-radius: var(--radius);
