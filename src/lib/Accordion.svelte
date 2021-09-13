@@ -4,44 +4,25 @@
 	export let isOpen = true;
 </script>
 
-<button on:click={() => (isOpen = !isOpen)}>
-	<span class:isOpen> &#9650;</span>
+<button class="block m-0 border border-solid border-brand-darkGray w-full text-left" on:click={() => (isOpen = !isOpen)}>
+	<span class="inline-block mr-1 rotate-90 transition-transform ease duration-300" class:isOpen> &#9650;</span>
 	{buttonText}
 </button>
 <div
 	use:slide={{ isOpen, duration: 250 }}
 	on:animationEnd={() => console.log('animation ended')}
-	class="accordion-content"
+	class="border border-solid border-t-0 border-brand-darkGray"
 >
-	<div class="wrapper">
+	<div class="p-1.5">
 		<slot />
 	</div>
 </div>
 
 <style>
-	.wrapper {
-		padding: 20px;
-	}
 
-	button {
-		display: block;
-		margin: 0;
-		border: 0;
-		width: 100%;
-		text-align: left;
-		border: solid 1px #333;
-	}
-	span {
-		margin-right: 5px;
-		display: inline-block;
-		transform: rotate(0.25turn);
-		transition: transform 0.3s ease;
-	}
+
 	.isOpen {
 		transform: rotate(0.5turn);
 	}
-	.accordion-content {
-		border: solid 1px #333;
-		border-top: 0;
-	}
+
 </style>
