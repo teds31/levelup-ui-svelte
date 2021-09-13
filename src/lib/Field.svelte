@@ -21,7 +21,7 @@
 			</span>
 		{/if}
 		{#if instructions}
-			<span class="instructions">
+			<span class="opacity-70 text-sm">
 				{instructions}
 			</span>
 		{/if}
@@ -30,8 +30,5 @@
 </div>
 
 <style>
-	.instructions {
-		opacity: 0.7;
-		font-size: var(--instructionsFontSize, 14px);
-	}
+
 </style>
